@@ -3,6 +3,7 @@ import { ArrowRight } from 'lucide-react'
 import { useTranslation } from '../i18n'
 import imageCenter from '@/assets/image.png'
 import imageLeft from '@/assets/image copy.png'
+import saraswati from '@/assets/saraswati.png'
 
 export default function HeroSection() {
     const { t } = useTranslation()
@@ -10,9 +11,26 @@ export default function HeroSection() {
     return (
         <section className="flex flex-col items-center w-full min-h-[calc(100vh-80px)] pt-12 pb-24 px-4 sm:px-6 lg:px-8 bg-linear-to-b from-[#e8c697]/10 to-transparent">
             {/* 1. Top: Company Name */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-primary mb-12 text-center drop-shadow-md">
-                {t('hero.title')}
-            </h1>
+
+            <div className="flex flex-col justify-center items-center w-full">
+                <div className="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-12 w-full max-w-4xl mb-8 md:mb-12 px-4 drop-shadow-md">
+                    <p className="order-1 md:order-1 text-lg md:text-xl font-bold text-primary text-center leading-relaxed">
+                        அருட்பெருஞ்ஜோதி <br /> அருட்பெருஞ்ஜோதி
+                    </p>
+
+                    <img src={saraswati} alt="Saraswati" className="order-3 md:order-2 w-28 h-28 md:w-40 md:h-40 object-contain" />
+
+                    <p className="order-2 md:order-3 text-lg md:text-xl font-bold text-primary text-center leading-relaxed">
+                        தனிப்பெருங்கருணை <br /> அருட்பெருஞ்ஜோதி
+                    </p>
+                </div>
+
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-primary mb-12 text-center drop-shadow-md px-2">
+                    {t('hero.title')}
+                </h1>
+            </div>
+
+
 
             {/* 2. Middle Row: Left Image, Center Image, Right Slogan */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-4 items-center w-full max-w-6xl mb-16">
