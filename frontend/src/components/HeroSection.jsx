@@ -13,28 +13,32 @@ export default function HeroSection() {
         <section className="flex flex-col items-center w-full min-h-[calc(100vh-80px)] pt-12 pb-10 px-4 sm:px-6 lg:px-8 bg-linear-to-b from-[#e8c697]/10 to-transparent">
             {/* 1. Top: Company Name */}
 
-            <div className="flex flex-col justify-center items-center w-full">
-                <div className="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-12 w-full max-w-4xl mb-8 md:mb-12 px-4 drop-shadow-md">
-                    <p className="order-1 md:order-1 text-lg md:text-xl font-bold text-primary text-center leading-relaxed">
-                        அருட்பெருஞ்ஜோதி <br /> அருட்பெருஞ்ஜோதி
-                    </p>
-
-                    <img src={vallar} alt="vallalar" className="order-3 rotate-2  md:order-2 w-28 h-28 md:w-50 md:h-50 object-contain" />
-
-                    <p className="order-2 md:order-3 text-lg md:text-xl font-bold text-primary text-center leading-relaxed">
-                        தனிப்பெருங்கருணை <br /> அருட்பெருஞ்ஜோதி
-                    </p>
-                </div>
-
-                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-primary mb-12 text-center drop-shadow-md px-2">
+            <div className="flex  justify-center items-center w-full">
+                {/* <div className="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-12 w-full max-w-4xl mb-8 md:mb-12 px-4 drop-shadow-md"> */}
+                <p className="order-1 md:order-1 text-[5px] md:text-[9px] font-bold text-primary text-center leading-relaxed">
+                    <img src={saraswati} alt="saraswati" className="w-28 h-28 md:w-60 md:h-60 object-contain" />
+                    <p className="relative top-[-20px]" >ஓம் ஹிரீம் ஐம் ஸ்ரீம் ஸ்ரீ <br />கமலதாரிண்யை நமக வசியம்</p>
+                </p>
+                <h1 className="text-3xl sm:text-3xl mt-12 md:w-full md:text-4xl lg:text-5xl order-2 md:order-2 font-extrabold text-primary mb-12 text-center drop-shadow-md px-2">
                     {t('hero.title')}
                 </h1>
+
+
+                <p className="order-2 md:order-3 text-[5px] md:text-[9px]  font-bold text-primary text-center leading-relaxed">
+                    <img src={vallar} alt="vallalar" className="order-3 rotate-2  md:order-3 w-28 h-28 md:w-50 md:h-50 object-contain" />
+                    அருட்பெருஞ்ஜோதி <br /> அருட்பெருஞ்ஜோதி
+
+                    தனிப்பெருங்கருணை <br /> அருட்பெருஞ்ஜோதி
+                </p>
+                {/* </div> */}
+
+
             </div>
 
 
 
             {/* 2. Middle Row: Left Image, Center Image, Right Slogan */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-4 items-center w-full max-w-6xl mb-16">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-25 items-center w-full max-w-6xl mb-16">
                 {/* Left Side: Image Copy */}
                 <div className="flex justify-center md:justify-end">
                     <img
@@ -52,7 +56,7 @@ export default function HeroSection() {
                         <img
                             src={imageCenter}
                             alt="Astrology Reading"
-                            className="relative w-64 h-64 md:w-80 md:h-80 object-contain shadow-2xl rounded-full bg-[#fdfaf5] p-4 border-4 border-[#e8c697]/50 transform transition hover:scale-105 duration-300"
+                            className="relative w-64  h-64 md:w-80 animate-[spin_20s_linear_infinite] md:h-80 object-contain shadow-2xl rounded-full bg-[#fdfaf5] p-4 border-4 border-[#e8c697]/50 transform transition hover:scale-105 duration-300"
                         />
                     </div>
                 </div>
@@ -66,7 +70,7 @@ export default function HeroSection() {
             </div>
 
             {/* 3. Bottom Area: Subtitle & CTA */}
-            <div className="flex flex-col items-center text-center space-y-8 max-w-4xl mt-4">
+            <div className="flex flex-col items-center text-center space-y-8 max-w-2xl mt-4">
                 <p className="text-xl md:text-2xl lg:text-3xl text-foreground font-semibold drop-shadow-sm px-4">
                     {t('hero.subtitle')}
                 </p>

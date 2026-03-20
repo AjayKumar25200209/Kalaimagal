@@ -6,7 +6,7 @@ export default function FeatureHighlights() {
 
     return (
         <section className="pb-16 pt-2 bg-muted/30">
-            <p className='text-center text-2xl w-3/4 mx-auto font-bold text-primary mb-12 drop-shadow-md'>
+            <p className='text-center text-xl w-3/4 mx-auto font-bold text-primary mb-12 drop-shadow-md'>
                 {t('home.feature.title')}
             </p>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
