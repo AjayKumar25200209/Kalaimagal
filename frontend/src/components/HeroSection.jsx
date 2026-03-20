@@ -1,0 +1,65 @@
+import { Link } from 'react-router-dom'
+import { ArrowRight } from 'lucide-react'
+import { useTranslation } from '../i18n'
+import imageCenter from '@/assets/image.png'
+import imageLeft from '@/assets/image copy.png'
+
+export default function HeroSection() {
+    const { t } = useTranslation()
+
+    return (
+        <section className="flex flex-col items-center w-full min-h-[calc(100vh-80px)] pt-12 pb-24 px-4 sm:px-6 lg:px-8 bg-linear-to-b from-[#e8c697]/10 to-transparent">
+            {/* 1. Top: Company Name */}
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-primary mb-12 text-center drop-shadow-md">
+                {t('hero.title')}
+            </h1>
+
+            {/* 2. Middle Row: Left Image, Center Image, Right Slogan */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-4 items-center w-full max-w-6xl mb-16">
+                {/* Left Side: Image Copy */}
+                <div className="flex justify-center md:justify-end">
+                    <img
+                        src={imageLeft}
+                        alt="Astrology Guide"
+                        className="w-56 h-56 md:w-64 md:h-64 object-contain shadow-2xl rounded-3xl bg-white/60 p-2 border border-white/40 transform transition hover:scale-105 duration-300"
+                    />
+                </div>
+
+                {/* Center: Image */}
+                <div className="flex justify-center">
+                    <div className="relative">
+                        {/* Glow behind image */}
+                        <div className="absolute inset-0 bg-[#e8c697] rounded-full blur-3xl opacity-40 animate-pulse"></div>
+                        <img
+                            src={imageCenter}
+                            alt="Astrology Reading"
+                            className="relative w-64 h-64 md:w-80 md:h-80 object-contain shadow-2xl rounded-full bg-[#fdfaf5] p-4 border-4 border-[#e8c697]/50 transform transition hover:scale-105 duration-300"
+                        />
+                    </div>
+                </div>
+
+                {/* Right Side: Slogan */}
+                <div className="flex justify-center md:justify-start text-center md:text-left h-full items-center">
+                    <p className="text-xl md:text-2xl font-bold text-foreground/90 leading-relaxed max-w-md p-6 bg-white/0 backdrop-blur-0 rounded-3xl border border-white/0">
+                        {t('hero.slogan')}
+                    </p>
+                </div>
+            </div>
+
+            {/* 3. Bottom Area: Subtitle & CTA */}
+            <div className="flex flex-col items-center text-center space-y-8 max-w-4xl mt-4">
+                <p className="text-xl md:text-2xl lg:text-3xl text-foreground font-semibold drop-shadow-sm px-4">
+                    {t('hero.subtitle')}
+                </p>
+
+                <Link
+                    to="/contact"
+                    className="group inline-flex items-center space-x-3 bg-primary text-primary-foreground px-8 py-4 rounded-full font-bold text-lg hover:bg-primary/90 transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1"
+                >
+                    <span>{t('hero.cta')}</span>
+                    <ArrowRight className="group-hover:translate-x-1 transition-transform" size={24} />
+                </Link>
+            </div>
+        </section>
+    )
+}
