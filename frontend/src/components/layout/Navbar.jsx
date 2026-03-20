@@ -3,6 +3,7 @@ import { useTranslation } from '../../i18n'
 import { useStore } from '../../store/useStore'
 import { Menu, X, Languages } from 'lucide-react'
 import { useState } from 'react'
+import saraswati from '@/assets/saraswati.png'
 
 export function Navbar() {
   const { t, language } = useTranslation()
@@ -20,10 +21,12 @@ export function Navbar() {
   return (
     <nav className="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-border shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16">
+        <div className="flex justify-between h-16"> 
           <div className="flex items-center">
             <Link to="/" className="flex-shrink-0 flex items-center">
-              <span className="font-bold text-xl text-primary md:text-2xl">
+            {/* <img src={saraswati} alt="saraswati" className="w-10 h-10" /> */}
+              <span className="font-bold text-lg text-primary md:text-2xl">
+                
                 {t('nav.brand')}
               </span>
             </Link>

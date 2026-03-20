@@ -4,12 +4,13 @@ import { useTranslation } from '../i18n'
 import imageCenter from '@/assets/image.png'
 import imageLeft from '@/assets/image copy.png'
 import saraswati from '@/assets/saraswati.png'
+import vallar from '@/assets/vallar.png'
 
 export default function HeroSection() {
     const { t } = useTranslation()
 
     return (
-        <section className="flex flex-col items-center w-full min-h-[calc(100vh-80px)] pt-12 pb-24 px-4 sm:px-6 lg:px-8 bg-linear-to-b from-[#e8c697]/10 to-transparent">
+        <section className="flex flex-col items-center w-full min-h-[calc(100vh-80px)] pt-12 pb-10 px-4 sm:px-6 lg:px-8 bg-linear-to-b from-[#e8c697]/10 to-transparent">
             {/* 1. Top: Company Name */}
 
             <div className="flex flex-col justify-center items-center w-full">
@@ -18,7 +19,7 @@ export default function HeroSection() {
                         அருட்பெருஞ்ஜோதி <br /> அருட்பெருஞ்ஜோதி
                     </p>
 
-                    <img src={saraswati} alt="Saraswati" className="order-3 md:order-2 w-28 h-28 md:w-40 md:h-40 object-contain" />
+                    <img src={vallar} alt="vallalar" className="order-3 rotate-2  md:order-2 w-28 h-28 md:w-50 md:h-50 object-contain" />
 
                     <p className="order-2 md:order-3 text-lg md:text-xl font-bold text-primary text-center leading-relaxed">
                         தனிப்பெருங்கருணை <br /> அருட்பெருஞ்ஜோதி
